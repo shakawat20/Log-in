@@ -44,12 +44,35 @@ const CheckLabel = styled.label`
   width:441px;
   margin-bottom: 8px;
   font-size:12px;
+
+  @media (max-width: 768px) {
+  
+    height:15px;
+    width:260px;
+    
+  }
+
+  @media (min-width: 800px) {
+    width:250px;
+  }
+  @media (min-width: 1000px) {
+   
+    width:441px;
+  }
+
+
 `
 const ChangePass = styled(CheckLabel)`
 justify-content:right;
 align-item:center;
 height:28px;
 color:gray;
+@media (min-width: 800px) {
+padding-top:2px;
+}
+@media (min-width: 1000px) {
+ padding-top:2px;
+}
 
 `
 
@@ -82,17 +105,30 @@ const LabelText = styled.span`
             color:  #20b2aa;
             background-color: #20b2aa;
           }
+        
+
+
         `;
     }
   }}
 `;
 
-const GoogleSignIn=styled.a`
+const GoogleSignIn = styled.a`
 color:gray;
 border:2px solid #20b2aa;
 margin-top:10px;
 padding:10px;
 border-radius:4px;
+
+@media (max-width: 768px) {
+  width:150px;
+  margin-top:5px;
+  padding:5px;
+}
+
+
+
+
 `
 
 
@@ -102,6 +138,13 @@ display: flex;
 justify-content:center;
 align-items:center;
 height:705px;
+@media (max-width: 768px) {
+  flex-direction: column;
+  width:100%;
+  
+}
+
+
 
 `
 
@@ -119,6 +162,23 @@ const Input = styled.input.attrs({ $size: '1em' })`
   width:400px;
   margin: ${props => props.$size};
   padding: ${props => props.$size};
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height:15px;
+    width:200px;
+  }
+  @media (min-width: 800px) {
+    flex-direction: column;
+    height:15px;
+    width:200px;
+  }
+  @media (min-width: 1000px) {
+    flex-direction: column;
+    height:15px;
+    width:400px;
+  }
+
 `;
 
 const Form = styled.form`
@@ -129,7 +189,31 @@ const Form = styled.form`
   padding-bottom:40px;
   border-radius:10px;
   margin: 0 auto;
-border:4px solid #20b2aa;
+  border:4px solid #20b2aa;
+
+  @media (max-width: 768px) {
+  width:400px;
+  height:450px;
+
+  
+}
+  @media (min-width: 800px) {
+  width:350px;
+  height:450px;
+
+  
+}
+  @media (min-width: 1000px) {
+  width:550px;
+ 
+
+  
+}
+
+
+
+
+
 `;
 const Label = styled.label`
   margin-bottom: 5px;
@@ -137,6 +221,22 @@ const Label = styled.label`
   margin-left:13px;
   padding-left:4px;
   width:451px;
+  @media (max-width: 768px) {
+    
+    height:15px;
+    width:250px;
+  }
+  @media (min-width: 800px) {
+    
+    height:15px;
+    width:250px;
+  }
+  @media (min-width: 1000px) {
+    width:451px;
+    height:15px;
+   
+  }
+
 
 `;
 
@@ -152,13 +252,31 @@ background-color: #20b2aa;
 `;
 
 
-const StyledImage=styled.img`
+const StyledImage = styled.img`
 
 width:750px;
-border:2px slo
 height:100%;
+@media (min-width: 800px) {
+
+  max-width: 400px; 
+  height: auto;
+}
+@media (min-width: 1000px) {
+
+  max-width: 750px; 
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  flex-direction: column;
+  height:300px;
+  width:250px;
+  display:none;
+}
+
+
 
 `
 
 
-export { Input, Form, Label, LoginButton, Section, Title, Checkbox, CheckLabel, LabelText, ChangePass,StyledImage,GoogleSignIn };
+export { Input, Form, Label, LoginButton, Section, Title, Checkbox, CheckLabel, LabelText, ChangePass, StyledImage, GoogleSignIn };
